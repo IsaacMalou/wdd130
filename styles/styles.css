@@ -1,3 +1,10 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -5,16 +12,18 @@ nav {
 
 nav a {
     color: white;
-    display: block;
+    display: inline-block; /* Changed to inline-block so they sit side-by-side */
     padding: 20px;
 }
 
 h1 {
     color: darkblue;
+    padding: 1rem;
 }
 
 main {
     max-width: 840px;
+    margin: 0 auto; /* Centers the content */
 }
 
 main img {
@@ -23,28 +32,47 @@ main img {
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin-left: 15px;
 }
 
 aside {
     width: 300px;
-    margin: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f4f4f4;
-    color: #333;
+    position: relative; /* Required for the absolute heading overlay */
+    text-align: center;
 }
 
 aside img {
-    width: 200px;
+    width: 100%; /* Makes image fit the aside width */
     height: auto;
 }
 
+/* Absolute Positioning for Heading Overlay */
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the text over the image */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: makes text readable */
+    padding: 5px;
+}
+
 p {
-    padding: 0;
+    padding: 1rem;
 }
 
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 1rem;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
 }
