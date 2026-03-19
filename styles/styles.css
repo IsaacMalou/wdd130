@@ -12,8 +12,9 @@ nav {
 
 nav a {
     color: white;
-    display: inline-block; /* Changed to inline-block so they sit side-by-side */
+    display: inline-block;
     padding: 20px;
+    text-decoration: none;
 }
 
 h1 {
@@ -23,7 +24,9 @@ h1 {
 
 main {
     max-width: 840px;
-    margin: 0 auto; /* Centers the content */
+    margin: 0 auto;
+    /* This clears the float so the box below doesn't overlap */
+    overflow: auto; 
 }
 
 main img {
@@ -32,8 +35,9 @@ main img {
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    /* Activity: Float to the right */
     float: right;
-    margin-left: 15px;
+    margin: 0 0 15px 15px;
 }
 
 aside {
@@ -43,7 +47,7 @@ aside {
 }
 
 aside img {
-    width: 100%; /* Makes image fit the aside width */
+    width: 100%;
     height: auto;
 }
 
@@ -52,13 +56,15 @@ aside h2 {
     position: absolute;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centers the text over the image */
-    background-color: rgba(255, 255, 255, 0.7); /* Optional: makes text readable */
-    padding: 5px;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 15px;
+    border: 1px solid #ccc;
 }
 
 p {
     padding: 1rem;
+    line-height: 1.5;
 }
 
 footer {
@@ -68,11 +74,17 @@ footer {
     padding: 1rem;
 }
 
-/* Class Selectors */
+/* Class Selectors Section */
+/* Note: Removed background/color from 'aside' rule above and moved to .box */
 .box {
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
     background-color: #f4f4f4;
     color: #333;
+    list-style-position: inside; /* Keeps bullets inside the box */
+}
+
+.box li {
+    padding: 5px 0;
 }
