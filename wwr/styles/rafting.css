@@ -1,6 +1,6 @@
 :root {
   --primary-color: #0b3c5d;
-  --secondary-color: #328cc1;
+  --secondary-color: #1f6fa5;
   --accent1-color: #1d2731;
   --accent2-color: #d9b310;
   --heading-font: Georgia, serif;
@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 nav, p, section, article {
