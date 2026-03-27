@@ -141,10 +141,11 @@ footer {
     align-items: center;
     background-color: var(--accent1-color);
     padding: 10px;
+    color: white;
 }
 
 footer p {
-    color: white;
+    color: white; 
     text-align: center;
     width: 100%;
 }
