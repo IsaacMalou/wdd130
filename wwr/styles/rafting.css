@@ -51,35 +51,45 @@ header img {
 .nav-links a {
     text-decoration: none;
     color: white;
-    background-color: var(--primary-color);
+    background-color: var(--accent1-color);
     padding: 8px 12px;
     border-radius: 5px;
 }
 
+.nav-links a:hover {
+    background-color: var(--accent2-color);
+}
+
 /* HERO */
 .hero {
+    position: relative;
     margin: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #eee;
-    text-align: center;
 }
 
 .hero img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
 }
 
 .hero article {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    max-width: 300px;
 }
 
 .hero article img {
-    width: 120px;
+    float: right;
+    width: 100px;
+    margin-left: 10px;
 }
 
 /* HISTORY (GRID) */
@@ -132,11 +142,15 @@ footer {
     padding: 10px 20px;
 }
 
-.social {
+.socialmedia {
     display: flex;
     gap: 10px;
 }
 
-.social img {
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
     width: 30px;
 }
