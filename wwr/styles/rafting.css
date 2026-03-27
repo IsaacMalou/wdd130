@@ -38,7 +38,7 @@ header img {
     width: 120px;
 }
 
-/* NAV */
+/* NAV (RESTORED NICE BUTTON STYLE) */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -46,10 +46,16 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: var(--primary-color);
     padding: 10px 20px;
-    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--accent2-color);
+    color: black;
 }
 
 /* HERO */
@@ -68,6 +74,8 @@ nav a {
     width: 100%;
     text-align: center;
     color: white;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 10px;
 }
 
 .hero article {
@@ -126,20 +134,33 @@ nav a {
     font-size: 14px;
 }
 
-/* FOOTER */
+/* FOOTER (CENTER TEXT FIXED) */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--accent1-color);
     padding: 10px;
 }
 
-/* SOCIAL */
+footer p {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* SOCIAL ICONS (NO BOX LOOK) */
+.socialmedia {
+    position: absolute;
+    right: 10px;
+}
+
 .socialmedia a {
     text-decoration: none;
 }
 
 .socialmedia img {
     width: 25px;
+    height: auto;
+    background: none; /* ✅ removes box feel */
 }
