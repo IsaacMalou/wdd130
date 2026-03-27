@@ -8,7 +8,7 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* UNIVERSAL RESET */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +19,7 @@ body {
     font-family: var(--body-font);
 }
 
+/* HEADINGS */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -26,78 +27,86 @@ h1, h2 {
     margin: 20px 0;
 }
 
-/* HEADER */
+/* HEADER (GRID) */
 header {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 120px 1fr;
     align-items: center;
-    background-color: var(--secondary-color); /* ✅ now USED */
+    background-color: var(--secondary-color);
     padding: 10px 20px;
 }
 
 header img {
-    width: 120px;
+    width: 100px;
 }
 
-/* NAVIGATION */
-nav {
+/* NAV (FLEX) */
+.nav-links {
+    list-style: none;
     display: flex;
     justify-content: flex-end;
     gap: 15px;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
     color: white;
     background-color: var(--primary-color);
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: var(--accent2-color);
-    color: black;
-}
-
-/* HERO / INTRO SECTION */
+/* HERO */
 .hero {
-    background-color: #eee;
-    padding: 30px;
     margin: 20px;
     border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #eee;
+    text-align: center;
 }
 
-.hero p {
-    padding: 10px;
+.hero img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
-/* HISTORY SECTION */
+.hero article {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.hero article img {
+    width: 120px;
+}
+
+/* HISTORY (GRID) */
 .history {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
     gap: 20px;
-    align-items: center;
     padding: 20px;
-    border: 1px solid #ccc;
     margin: 20px;
+    border: 1px solid #ccc;
+    align-items: center;
 }
 
 .history img {
     width: 100%;
-    border: 1px solid black;
 }
 
-/* ADVENTURES SECTION */
+/* ADVENTURES (FLEX) */
 .adventures {
-    text-align: center;
+    margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-    margin: 20px;
+    text-align: center;
 }
 
 .adventure-gallery {
     display: flex;
-    justify-content: space-between;
     gap: 10px;
 }
 
@@ -107,12 +116,11 @@ nav a:hover {
 
 .adventure-gallery img {
     width: 100%;
-    height: auto;
 }
 
 .adventure-gallery figcaption {
-    margin-top: 5px;
     font-size: 14px;
+    margin-top: 5px;
 }
 
 /* FOOTER */
@@ -122,16 +130,13 @@ footer {
     align-items: center;
     background-color: var(--secondary-color);
     padding: 10px 20px;
-    margin-top: 20px;
 }
 
-/* SOCIAL ICONS FIX */
 .social {
     display: flex;
     gap: 10px;
 }
 
 .social img {
-    width: 30px;   
-    height: auto;
+    width: 30px;
 }
