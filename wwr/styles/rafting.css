@@ -177,5 +177,58 @@ footer p {
     width: 25px;
     height: auto;
     background: none;
-    /* ✅ removes box feel */
+
+}
+
+/* CONTACT PAGE */
+.contact-info,
+.employees,
+.contact-form {
+    padding: 20px;
+}
+
+/* MAP */
+.contact-info iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* EMPLOYEES */
+.employees {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.employees img {
+    width: 150px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+form input,
+form textarea {
+    padding: 8px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent2-color);
+    color: black;
 }
