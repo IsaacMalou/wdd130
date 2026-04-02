@@ -90,7 +90,7 @@ input[type="checkbox"] {
     width: 25px;
     height: 25px;
     justify-self: start;
-    /* Keeps checkbox aligned left in its grid cell */
+
 }
 
 textarea {
