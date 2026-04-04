@@ -138,7 +138,7 @@ nav a:hover {
 
 /* --- CONTACT PAGE --- */
 
-/* Fix: Centers the main title and address section */
+/* Fix: Main title and address section */
 main h1 {
     text-align: center;
     margin-top: 20px;
@@ -167,25 +167,23 @@ main h1 {
     border: 1px solid #ccc;
 }
 
-/* Fix: Form Alignment */
+/* Form Alignment */
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Fix: Ensures radio/checkbox labels stay next to the input */
-.radio-group,
-.checkbox-group {
+/* Radio buttons container */
+.radio-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 5px 0;
 }
 
-/* Fix: Checkbox text wrapping - ensures input stays left and text wraps right */
-.radio-group label,
-.checkbox-group label {
+/* Keep Grid for Radio Buttons only */
+.radio-group label {
     display: grid;
     grid-template-columns: 30px 1fr;
     align-items: center;
@@ -193,14 +191,33 @@ main h1 {
     text-align: left;
 }
 
-/* Fix: Stops radio buttons and checkboxes from stretching */
+/* FIXED: Checkbox container and label layout */
+.checkbox-group {
+    display: flex;
+    /* Changed from column to flex */
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    /* Removed grid to stop text squishing */
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Fix: Prevent stretching and set sizes */
 .contact-form input[type="radio"],
 .contact-form input[type="checkbox"] {
     width: 20px;
     height: 20px;
     margin: 0;
+    flex-shrink: 0;
+    /* Prevents checkbox from squishing */
 }
 
+/* General inputs */
 .contact-form input,
 .contact-form input[type="email"],
 .contact-form textarea {
@@ -252,36 +269,30 @@ main h1 {
     border-radius: 5px;
 }
 
-/* --- FOOTER: CENTERED TEXT, ICONS RIGHT --- */
+/* FOOTER */
 footer {
     background-color: var(--accent1-color);
     color: white;
     padding: 1.5rem 2rem;
-
-    /* 3-column grid to keep text exactly in the middle */
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
 
-/* Column 1*/
 footer::before {
     content: "";
 }
 
-/* Column 2*/
 footer p {
     margin: 0;
     text-align: center;
     grid-column: 2;
 }
 
-/* Column 3*/
 .socialmedia {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
-    /* Right alignment */
     grid-column: 3;
 }
 
@@ -290,8 +301,17 @@ footer p {
     height: 30px;
 }
 
-/* RESPONSIVE FOOTER */
+/* RESPONSIVE */
 @media (max-width: 800px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .employees-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     footer {
         display: flex;
         flex-direction: column;

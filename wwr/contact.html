@@ -12,9 +12,8 @@
 </head>
 
 <body>
-
   <header>
-    <img src="images/logo.png" alt="Rafting Company Logo">
+    <img src="images/logo.png" alt="White Water Rafting Company Logo">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -28,45 +27,41 @@
   <main>
     <h1>White Water Rafting Company</h1>
 
-    <!-- Top Contact Info from -->
     <section class="company-details">
-      <p>123 Main River Street</p>
-      <p>Central Equarotia , Juba</p>
-      <p>+211 999 999 9999</p>
-      <p>info@whitewater.com</p>
+      <p>123 Main River Street, Kolob, California</p>
+      <p>Phone: +1 999 999 9999 | Email: info@whitewater.com</p>
     </section>
 
     <div class="contact-layout">
-      <!-- LEFT: MAP -->
       <section class="company-info">
         <iframe src="https://satellites.pro/Google_plan/Juba_map.South_Sudan"></iframe>
       </section>
 
-      <!-- RIGHT: FORM -->
       <section class="contact-form">
-        <form>
+        <form action="#" method="post">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Type Your Name Here!" required>
+          <input type="text" id="name" name="name" required>
 
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Type Your Email Here!" required>
+          <input type="email" id="email" name="email" required>
 
           <p>Message Purpose</p>
           <div class="radio-group">
-            <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-            <label><input type="radio" name="purpose" value="booking"> Reservation Question</label>
-            <label><input type="radio" name="purpose" value="feedback"> Website Suggestion</label>
+            <label for="general"><input type="radio" id="general" name="purpose" value="general">
+              General Inquiry</label>
+            <label for="booking"><input type="radio" id="booking" name="purpose" value="booking">
+              Reservation Question</label>
+            <label for="feedback"><input type="radio" id="feedback" name="purpose" value="feedback">
+              Website Suggestion</label>
           </div>
 
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Type here"></textarea>
+          <textarea id="message" name="message" rows="4"></textarea>
 
           <div class="checkbox-group">
-            <label><input type="checkbox" id="subscribe" name="subscribe"> Please Subscribe me to
-              the monthly
-              newsletter</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Please subscribe me to the monthly newsletter</label>
           </div>
-
 
           <button type="submit">Get in Touch!</button>
         </form>
@@ -77,31 +72,31 @@
       <h2>We Are Here to Serve You</h2>
       <div class="employees-container">
         <figure>
-          <img src="images/employee1.png" alt="John">
+          <img src="images/employee1.png" alt="John - Professional Rafting Guide">
           <figcaption>John - Guide</figcaption>
         </figure>
         <figure>
-          <img src="images/employee2.png" alt="Sarah">
+          <img src="images/employee2.png" alt="Sarah - Customer Support Representative">
           <figcaption>Sarah - Support</figcaption>
         </figure>
         <figure>
-          <img src="images/employee3.png" alt="David">
+          <img src="images/employee3.png" alt="David - Rafting Safety Expert">
           <figcaption>David - Safety Expert</figcaption>
         </figure>
       </div>
     </section>
-
   </main>
 
   <footer>
     <p>© 2026 White Water Rafting Company | Isaac Malou</p>
     <nav class="socialmedia">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/x-social-icon.png" alt="X"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://facebook.com"><img src="images/facebook.png" alt="Follow us on Facebook"></a>
+      <a href="https://twitter.com"><img src="images/x-social-icon.png"
+          alt="Follow us on X/Twitter"></a>
+      <a href="https://instagram.com"><img src="images/instagram.png"
+          alt="Follow us on Instagram"></a>
     </nav>
   </footer>
-
 </body>
 
 </html>
