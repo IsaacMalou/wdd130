@@ -44,7 +44,6 @@ nav {
     justify-content: flex-end;
 }
 
-/*nav*/
 nav ul {
     display: flex;
     list-style: none;
@@ -63,7 +62,6 @@ nav a {
     padding: 10px 20px;
     border-radius: 5px;
     display: block;
-
 }
 
 nav a:hover {
@@ -71,7 +69,7 @@ nav a:hover {
     color: black;
 }
 
-/* HERO */
+/* HERO (About Page) */
 .hero {
     position: relative;
 }
@@ -106,7 +104,7 @@ nav a:hover {
     margin-left: 10px;
 }
 
-/* HISTORY */
+/* HISTORY (About Page) */
 .history {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
@@ -124,7 +122,7 @@ nav a:hover {
     width: 100%;
 }
 
-/* ADVENTURES */
+/* ADVENTURES (About Page) */
 .adventures {
     padding: 20px;
     text-align: center;
@@ -133,102 +131,123 @@ nav a:hover {
 .adventure-gallery {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .adventure-gallery figure {
-    flex: 1;
+    flex: 1 1 150px;
 }
 
 .adventure-gallery img {
     width: 100%;
 }
 
-.adventure-gallery figcaption {
-    font-size: 14px;
+/* =========================================
+   CONTACT PAGE SPECIFIC LAYOUT (Wireframe)
+   ========================================= */
+
+/* Top Heading/Address Alignment */
+main h1 {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* FOOTER (CENTER TEXT FIXED) */
+/* Side-by-Side: Map and Form */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.company-info iframe {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+
+/* Form Styling */
+.contact-form form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Employees Section (3-Column Layout) */
+.employees {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+}
+
+.employees h2 {
+    margin-bottom: 20px;
+}
+
+/* This targets the profiles to align them horizontally */
+.employees-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.employees figure img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Circular as per standard profile style */
+    object-fit: cover;
+    background-color: #eee;
+}
+
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--accent1-color);
-    padding: 10px;
+    padding: 20px;
     color: white;
+    margin-top: 40px;
 }
 
-footer p {
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-/* SOCIAL ICONS (NO BOX LOOK) */
 .socialmedia {
-    position: absolute;
-    right: 10px;
-}
-
-.socialmedia a {
-    text-decoration: none;
+    display: flex;
+    gap: 15px;
 }
 
 .socialmedia img {
     width: 25px;
     height: auto;
-    background: none;
-
 }
 
-/* CONTACT PAGE */
-.contact-info,
-.employees,
-.contact-form {
-    padding: 20px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
 
-/* MAP */
-.contact-info iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    margin-top: 10px;
-}
-
-/* EMPLOYEES */
-.employees {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
-}
-
-.employees img {
-    width: 150px;
-}
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-}
-
-form input,
-form textarea {
-    padding: 8px;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--accent2-color);
-    color: black;
+    .contact-layout,
+    .employees-container {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
 }

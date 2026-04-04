@@ -4,12 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Contact Us | White Water Rafting Company</title>
   <meta name="description"
     content="Contact White Water Rafting Company for bookings, questions, and adventure inquiries.">
   <meta name="author" content="Isaac Chol Aguer">
-
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -17,7 +15,6 @@
 
   <header>
     <img src="images/logo.png" alt="Rafting Company Logo">
-
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,78 +26,84 @@
   </header>
 
   <main>
+    <h1>White Water Rafting Company</h1>
 
-    <h1>Contact Us</h1>
-
-    <!-- COMPANY INFO -->
-    <section class="contact-info">
-      <h2>Company Information</h2>
-      <p><strong>Address:</strong> Juba, South Sudan</p>
-      <p><strong>Phone:</strong> +211 900 000 000</p>
-      <p><strong>Email:</strong> info@rafting.com</p>
-
-      <iframe src="https://maps.google.com/maps?q=Juba%20South%20Sudan&output=embed"></iframe>
+    <!-- Top Contact Info from Wireframe -->
+    <section class="company-details">
+      <p>123 Main River Street</p>
+      <p>Kolob, California</p>
+      <p>+1 999 999 9999</p>
+      <p>info@whitewater.com</p>
     </section>
 
-    <!-- EMPLOYEES -->
+    <div class="contact-layout">
+      <!-- LEFT: MAP -->
+      <section class="company-info">
+        <iframe src="YOUR_GOOGLE_MAP_LINK"></iframe>
+      </section>
+
+      <!-- RIGHT: FORM -->
+      <section class="contact-form">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Placeholder" required>
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Placeholder" required>
+
+          <p>Message Purpose</p>
+          <div class="radio-group">
+            <input type="radio" id="general" name="purpose" value="general">
+            <label for="general">General Inquiry</label><br>
+
+            <input type="radio" id="booking" name="purpose" value="booking">
+            <label for="booking">Reservation Question</label><br>
+
+            <input type="radio" id="feedback" name="purpose" value="feedback">
+            <label for="feedback">Website Suggestion</label>
+          </div>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Type here"></textarea>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Please Subscribe me to the monthly newsletter</label>
+          </div>
+
+          <button type="submit">Get in Touch!</button>
+        </form>
+      </section>
+    </div> <!-- END contact-layout -->
+
+    <!-- Employees (Full Width Below) -->
     <section class="employees">
-      <h2>Meet Our Team</h2>
+      <h2>We Are Here to Serve You</h2>
+      <div class="employee-grid">
+        <figure>
+          <img src="images/employee1.png" alt="John guide rafting instructor">
+          <figcaption>Employee Profile</figcaption>
+        </figure>
 
-      <figure>
-        <img src="images/employee1.png" alt="John guide rafting instructor">
-        <figcaption>John – Lead Guide</figcaption>
-      </figure>
+        <figure>
+          <img src="images/employee2.png" alt="Sarah customer support agent">
+          <figcaption>Employee Profile</figcaption>
+        </figure>
 
-      <figure>
-        <img src="images/employee2.png" alt="Sarah customer support agent">
-        <figcaption>Sarah – Customer Support</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/employee3.png" alt="David rafting safety expert">
-        <figcaption>David – Safety Expert</figcaption>
-      </figure>
-
+        <figure>
+          <img src="images/employee3.png" alt="David rafting safety expert">
+          <figcaption>Employee Profile</figcaption>
+        </figure>
+      </div>
     </section>
-
-    <!-- CONTACT FORM -->
-    <section class="contact-form">
-      <h2>Send Us a Message</h2>
-
-      <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-
-        <p>Purpose of Message:</p>
-
-        <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <label>
-          <input type="checkbox" name="subscribe">
-          Please subscribe me to the monthly newsletter
-        </label>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
   </main>
 
   <footer>
-    <p>© 2026 White Water Rafting Company | Isaac Chol Aguer</p>
-
+    <p>© 2026 White Water Rafting Company | Isaac Malou</p>
     <nav class="socialmedia">
-      <a href="#"><img src="images/facebook.png" alt="Visit our Facebook page"></a>
-      <a href="#"><img src="images/x-social-icon.png" alt="Visit our X (twitter) page"></a>
-      <a href="#"><img src="images/instagram.png" alt="Visit our Instagram page"></a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/x-social-icon.png" alt="X"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
     </nav>
   </footer>
 
