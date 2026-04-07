@@ -181,7 +181,7 @@ main h1 {
     padding: 5px 0;
 }
 
-/* Grid for Radio Buttons only */
+/* Grid for Radio Buttons*/
 .radio-group label {
     display: grid;
     grid-template-columns: 30px 1fr;
@@ -319,11 +319,8 @@ footer p {
     }
 }
 
-/* ============================= */
 /* HOME PAGE MAIN CONTENT STYLES */
-/* ============================= */
 
-/* Use 'main .hero' to be more specific than the About Page styles */
 main .hero {
     position: relative;
     display: block;
@@ -336,7 +333,7 @@ main .hero {
     height: auto;
 }
 
-/* This is your centering box */
+/* Centering box */
 main .hero .hero-msg {
     position: absolute;
     top: 50%;
@@ -355,7 +352,7 @@ main .hero .hero-msg {
     z-index: 10;
 }
 
-/* Ensure the Newsletter stays BELOW the hero section */
+/* Newsletter stays*/
 .newsletter {
     position: relative;
     clear: both;
@@ -369,11 +366,8 @@ main .hero .hero-msg {
     font-size: 2.5rem;
     margin: 0 0 5px 0;
     color: white;
-    /* Ensures it stays white despite general h1 rules */
     background-color: transparent;
-    /* Removes the black bar from About Page styles */
     position: static;
-    /* Resets positioning from About Page styles */
     width: auto;
 }
 
@@ -467,7 +461,6 @@ main .hero .hero-msg {
     border-radius: 10px;
 }
 
-/* keep your style but align properly */
 .cta-box h2 {
     color: white;
     margin-bottom: 15px;
@@ -510,7 +503,7 @@ main .hero .hero-msg {
     }
 }
 
-/*TRIPS PAGE FINAL STYLES */
+/*TRIPS PAGE STYLES */
 
 /* Main Grid Layout*/
 .trips-grid {
